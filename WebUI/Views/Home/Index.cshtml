@@ -1,0 +1,35 @@
+﻿@{
+    ViewBag.Title = "ASP.NET MVC + OWIN + HangFire";
+}
+
+<div class="jumbotron">
+    <h1>ASP.NET MVC + OWIN + HangFire</h1>
+    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
+    <p><a href="http://asp.net" class="btn btn-primary btn-large">Learn more &raquo;</a></p>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>Fire-forget</h2>
+        <p>
+            Adicione um novo Job para ser executado uma única vez.
+        </p>
+        <p>
+            @Html.ActionLink("Fire-forget", "AddJob", new { @tipo = "FireForget" }, new { @class = "btn btn-default" })
+        </p>
+    </div>
+    <div class="col-md-4">
+        <h2>Delayed</h2>
+        <p>Adicione um novo Job aplicando um "delay" para sua execução.</p>
+        <p>
+            @Html.ActionLink("Delayed", "AddJob", new { @tipo = "Delayed" }, new { @class = "btn btn-default" })
+        </p>
+    </div>
+    <div class="col-md-4">
+        <h2>Recurring</h2>
+        <p>Adicione um novo Job recorrente executado todo dia ou toda hora.</p>
+        <p>
+            @Html.ActionLink("Recurring", "AddJob", new { @tipo = "Recurring" }, new { @class = "btn btn-default" })
+        </p>
+    </div>
+</div>
